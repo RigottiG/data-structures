@@ -1,8 +1,13 @@
 import { Stack } from '../stack-array';
 
+let stack: Stack<number>;
+
 describe('Stack Array', () => {
+  beforeEach(() => {
+    stack = new Stack<number>();
+  });
+
   it('push method', () => {
-    const stack = new Stack<number>();
     stack.push(1);
     stack.push(2);
     stack.push(3);
@@ -10,7 +15,6 @@ describe('Stack Array', () => {
   });
 
   it('pop method', () => {
-    const stack = new Stack<number>();
     stack.push(1);
     stack.push(2);
     stack.push(3);
@@ -20,9 +24,19 @@ describe('Stack Array', () => {
   });
 
   it('peek method', () => {
-    const stack = new Stack<number>();
     stack.push(72);
     stack.push(81);
     expect(stack.peek()).toBe(81);
+  });
+
+  it('isEmpty method', () => {
+    expect(stack.isEmpty()).toBeTruthy();
+    stack.push(1);
+    expect(stack.isEmpty()).toBeFalsy();
+  });
+
+  it('size method', () => {
+    stack.push(1);
+    expect(stack.size()).toBe(1);
   });
 });
