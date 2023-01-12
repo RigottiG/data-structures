@@ -50,11 +50,9 @@ export class Stack<T> {
       return '';
     }
 
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     let objString = `${this.items[0]}`;
 
     for (let i = 1; i < this.count; i++) {
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       objString = `${objString}, ${this.items[i]}`;
     }
 
