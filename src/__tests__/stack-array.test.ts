@@ -1,4 +1,4 @@
-import { Stack } from '../stack-array';
+import { Stack } from '../structures/stack-array';
 
 let stack: Stack<number>;
 
