@@ -11,6 +11,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "@typescript-eslint/no-dynamic-delete": "off"
+    "@typescript-eslint/no-dynamic-delete": "off",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off"
   }
 }
