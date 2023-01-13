@@ -8,4 +8,8 @@ describe('Palindrome checker', () => {
   it('should return false for a non-palindrome', () => {
     expect(palindromeChecker('hello')).toBeFalsy();
   });
+
+  it('should return an empty string when called with invalid param', () => {
+    expect(palindromeChecker('')).toBeFalsy();
+  });
 });
