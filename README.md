@@ -1,5 +1,5 @@
 # Study Data Structures Library
-This library is a collection of common data structures implemented in JavaScript for educational and study purposes. It is intended to be used for testing and learning, it not recommended to use it in production environments.
+This library is a collection of common data structures implemented in Typescript for educational and study purposes. It is intended to be used for testing and learning, it not recommended to use it in production environments.
 
 ## Implemented Data Structures
 - Array
