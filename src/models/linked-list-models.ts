@@ -1,6 +1,6 @@
 export class Node {
-  private readonly element: any;
-  private readonly next: any;
+  element: any;
+  next: any;
 
   constructor(element: any) {
     this.element = element;
