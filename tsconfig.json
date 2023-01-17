@@ -9,7 +9,7 @@
     "target": "es5",
     "declaration": true,
     "removeComments": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "pretty": true,
