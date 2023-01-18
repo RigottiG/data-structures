@@ -83,4 +83,52 @@ describe('Set', () => {
 
     expect(set.valuesLegacy()).toEqual(['a', 'b', 'c']);
   });
+
+  it('should return the union of sets ', () => {
+    set.add('a');
+    set.add('b');
+    set.add('c');
+
+    const otherSet = new Set<string>();
+    otherSet.add('a');
+    otherSet.add('c');
+    otherSet.add('d');
+    otherSet.add('e');
+
+    const unionSet = set.union(otherSet);
+
+    expect(unionSet.values()).toEqual(['a', 'b', 'c', 'd', 'e']);
+  });
+
+  it('should return the intersection between sets', () => {
+    set.add('a');
+    set.add('b');
+    set.add('c');
+
+    const otherSet = new Set<string>();
+    otherSet.add('a');
+    otherSet.add('c');
+    otherSet.add('d');
+    otherSet.add('e');
+
+    const intersectionSet = set.intersection(otherSet);
+
+    expect(intersectionSet.values()).toEqual(['a', 'c']);
+  });
+
+  it('should return the difference between sets', () => {
+    set.add('a');
+    set.add('b');
+    set.add('c');
+
+    const otherSet = new Set<string>();
+    otherSet.add('a');
+    otherSet.add('c');
+    otherSet.add('d');
+    otherSet.add('e');
+
+    const differenceSet = set.difference(otherSet);
+
+    expect(differenceSet.values()).toEqual(['b']);
+  });
 });
