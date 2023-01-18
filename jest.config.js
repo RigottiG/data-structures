@@ -13,13 +13,13 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
   coveragePathIgnorePatterns: ['/node_modules/', '\\.json$', '/__tests__/', '/stories/', '/\\.storybook/'],
-  globals: {
-    'ts-jest': {
-      tsconfig: '/Users/guilhermerigotti/Documents/Projects/personal/data-structures/tsconfig.json',
-      diagnostics: false,
-      isolatedModules: true,
-    },
-  },
+  // globals: {
+  //   'ts-jest': {
+  //     tsconfig: '/Users/guilhermerigotti/Documents/Projects/personal/data-structures/tsconfig.json',
+  //     diagnostics: false,
+  //     isolatedModules: true,
+  //   },
+  // },
   transformIgnorePatterns: ['/node_modules/(?!(lodash-es|antd|[^/]+/es|rc-animate|rc-util)/).*'],
   transform: {
     '\\.(ts|tsx)$': 'ts-jest',

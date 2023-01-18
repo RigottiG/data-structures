@@ -1,4 +1,4 @@
-import { LinkedList } from '../structures/linked-list/linked-list';
+import { LinkedList } from '../structures/linked-list';
 
 let linkedList: LinkedList;
 

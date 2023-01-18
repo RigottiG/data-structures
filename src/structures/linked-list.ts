@@ -1,10 +1,10 @@
-import { Node } from '../../models/linked-list-models';
-import { defaultEquals } from '../../utils';
+import { Node } from '../models/linked-list-models';
+import { defaultEquals } from '../utils';
 
 export class LinkedList {
   private count: number;
   private head: any;
-  private readonly equalsFn: Function;
+  private readonly equalsFn: (a: unknown, b: unknown) => boolean;
 
   constructor(equalsFn = defaultEquals) {
     this.count = 0;
