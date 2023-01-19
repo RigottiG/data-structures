@@ -131,4 +131,34 @@ describe('Set', () => {
 
     expect(differenceSet.values()).toEqual(['b']);
   });
+
+  it('should return true if the set is a subset of another set', () => {
+    set.add('a');
+    set.add('b');
+    set.add('c');
+
+    const otherSet = new Set<string>();
+    otherSet.add('a');
+    otherSet.add('b');
+    otherSet.add('c');
+    otherSet.add('d');
+    otherSet.add('e');
+
+    expect(set.isSubsetOf(otherSet)).toBe(true);
+  })
+
+  it('should return false if the set is not a subset of another set', () => {
+    set.add('a');
+    set.add('b');
+    set.add('c');
+
+    const otherSet = new Set<string>();
+    otherSet.add('a');
+    otherSet.add('b');
+    otherSet.add('c');
+    otherSet.add('d');
+    otherSet.add('e');
+
+    expect(otherSet.isSubsetOf(set)).toBe(false);
+  })
 });
